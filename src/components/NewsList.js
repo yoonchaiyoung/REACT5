@@ -30,6 +30,7 @@ const NewsList = ({ category }) => {
     const query = category === "all" ? "" : `&category=${category}`;
     return axios.get(
       `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=${API_KEY}`
+      // NEWS API 사이트 : https://newsapi.org/
     );
   }, [category]);
 
